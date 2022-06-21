@@ -19,7 +19,7 @@ body {
   height: 110vh;
   color: #333;
   /* background-image: linear-gradient(to top left, white 0%, #ee1515 100%); */
-  background: linear-gradient(0.25turn, #f0f0f0, #ee1515);
+  background: linear-gradient(0.25turn, #ee1515, #f0f0f0);
   display: flex;
   align-items: center;
   /* justify-content: ; */
@@ -66,15 +66,14 @@ main {
   position: relative;
   width: 150rem;
   height: 70rem;
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  filter: blur();
+  background-color: #ffffff59;
+  /* backdrop-filter: blur(100px);
+  filter: blur(); */
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  background-color: grey;
 }
 
 #cardborad {
@@ -85,7 +84,6 @@ main {
   /* width: px; */
   width: 150rem;
   height: 70rem;
-  background-color: goldenrod;
 }
 
 .player {
@@ -101,10 +99,13 @@ main {
   /* gap: 190px; */
   align-content: space-between;
   /* justify-content: center; */
+  /* display: none; */
 }
 .player--1 {
   margin-left: 300px;
-  background-color: green;
+  /* background-color: green; */
+  /* background-color: ; */
+  /* opacity: 0.95; */
 }
 
 /* ELEMENTS */
@@ -131,37 +132,14 @@ main {
 }
 
 .player--active {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #34ea59e9;
 }
 .player--active .name {
   font-weight: 700;
 }
-.player--active .score {
-  font-weight: 400;
-}
 
 .player--active .current {
   opacity: 1;
-}
-
-.currentHealth {
-  margin-top: 20px;
-  padding: 20px;
-  height: 50px;
-  width: 120px;
-  background-color: #c7365f;
-  /* opacity: 0.8;
-  border-radius: 9px;
-  color: black;
-  height: 80px;
-  width: 65%;
-  align-self: flex-end; */
-  /* justify-self: start; */
-  /* padding: 2rem; */
-  /* text-align: center;
-  transition: all 0.75s; */
-  /* transform: translateY(130%); */
-  /* transform: translateX(5%); */
 }
 
 .current-label {
@@ -216,8 +194,8 @@ main {
   width: 500px;
   /* background-color: white; */
   /* background-color: rgba(255, 255, 255, 0.6); */
-  backdrop-filter: blur(10px);
-  opacity: 1;
+  /* backdrop-filter: blur(10px); */
+  /* opacity: 0.9; */
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   /* box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1); */
@@ -225,7 +203,7 @@ main {
 }
 
 .btn::first-letter {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   display: inline-block;
   margin-right: 0.7rem;
 }
@@ -233,7 +211,7 @@ main {
 .btn--roll {
   top: 58.3rem;
 }
-.btn--hold {
+.btn--next {
   top: 64rem;
 }
 
@@ -546,4 +524,57 @@ main {
 .endingimg {
   height: 140%;
   margin-left: 80px;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
 }
+
+/*做一个血条8*/
+
+.wrap {
+  border-radius: 0.7rem;
+  width: 300px;
+  height: 31px;
+  background-color: #000;
+  overflow: hidden;
+  margin-top: 10px;
+  padding-bottom: 30px;
+}
+
+.hp--01,
+.hp--02 {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  transition: width 1s ease;
+  background-color: #ee1515;
+  padding-bottom: 30px;
+}
+
+.delay--01,
+.delay--02 {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  width: 300px;
+  height: 100%;
+  transition: left 1s, width 2s;
+  background-image: linear-gradient(to right, yellow, #e82525);
+  padding-bottom: 30px;
+}
+
+/* .hp--02 {
+  background-color: green;
+}
+
+.wrap {
+  
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  overflow: hidden;
+  margin-top: 12px;
+  padding: 10px;
+} */
